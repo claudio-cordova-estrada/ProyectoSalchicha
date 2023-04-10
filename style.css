@@ -1,0 +1,64 @@
+ /* El body al parecer no funciona, así que lo dejamos como una clase */
+.body {
+    background-color: #fff3c7;
+}
+
+/* barra de navegación (modificar a bootstrap) */
+
+li:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.active {
+    background-color: #af9261;
+}
+
+.active:hover {
+    background-color: #fbd28b;
+}
+
+.nav-item {
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* Principal */
+
+.textoAbout {
+    background-color: #fff4e1;
+}
+
+.carrusel {
+    width: 100%;
+    height: 100%;
+}
+
+.imagenCarrusel {
+    width: 700px;
+    height: 700px;
+}
+
+.content {
+    margin-top: 55px;
+}
+
+/* compra */
+
+.card-group img {
+    height: 250px;
+}
+
+.card {
+    margin: 20px 10px 0;
+}
+
+.card-body {
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: 10px;
+}
+
+.card-body a {
+    position: absolute;
+    bottom: 0;
+}
