@@ -5,6 +5,10 @@
 
 /* barra de navegación (modificar a bootstrap) */
 
+.navbarFixiado {
+    position: fixed;
+}
+
 li:hover {
     background-color: rgba(0,0,0,0.3);
 }
@@ -42,6 +46,17 @@ li:hover {
     margin-top: 55px;
 }
 
+.textoAbout {
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.imgAbout img {
+    box-shadow: 3px 0 10px 1px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    width: 100%;
+}
+
 /* compra */
 
 .card-group img {
@@ -50,12 +65,15 @@ li:hover {
 
 .card {
     margin: 20px 10px 0;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.5);
+    border-radius: 10px;
 }
 
 .card-body {
     position: relative;
     padding-bottom: 80px;
     margin-bottom: 10px;
+    height: 150px;
 }
 
 .card-body a {
