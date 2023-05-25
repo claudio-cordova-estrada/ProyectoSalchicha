@@ -18,6 +18,16 @@ try {
 	console.error(error);
 }
 
+// CARRITO JQUERY
+
+
+
+// CARRITO LINKS
+
+$("#agregarItem").on("click", function() {
+    alert("funciona");
+})
+
 // CARRITO
 
 // Variables
