@@ -9,9 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Log in</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="{% static 'core/'%}css/style.css" rel="stylesheet">
+    <title>Registro</title>
 </head>
 
 <body class="body">
@@ -48,7 +47,7 @@
 
     <!--Barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left: 30px;">
-        <a class="navbar-brand" href="#">Salchicha</a>
+        <a class="navbar-brand" href="#" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Salchicha</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -72,34 +71,62 @@
                 <li class="nav-item">
                     <a class="nav-link" href="carrito.html">Carrito</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Log in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="registrarse.html">Registro</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Log in</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="registrarse.html">Registro</a>
+              </li>
             </ul>
-        </div>
+          </div>
     </nav>
+
 
     <div class="container formReg">
         <form class="needs-validation" novalidate>
-            <div class="row-md-6 mb-3">
-                <label for="Correo">Correo electrónico</label>
-                <input type="email" class="form-control" id="Correo" placeholder="Ingrese su correo electrónico"
-                    required>
-                <div class="valid-feedback"> ¡Correcto! </div>
-                <div class="invalid-feedback"> El correo no está registrado. </div>
-            </div>
-            <div class="row-md-3 mb-3">
-                <label for="Contra">Contraseña</label>
-                <input type="password" class="form-control" id="Contra" placeholder="Ingrese su contraseña"
-                    minlength="6" maxlength="16" required>
-                <div class="invalid-feedback"> Contraseña inválida. </div>
-            </div>
-            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+            <div class="form-col">
+                <div class="row-md-4 mb-3">
+                    <label for="NombreCompleto">Nombre completo</label>
+                    <input type="text" class="form-control" id="NombreCompleto" placeholder="Ingrese su nombre completo"
+                        minlength="4" maxlength="40" required>
+                    <div class="valid-feedback"> ¡Perfecto! </div>
+                    <div class="invalid-feedback"> Por favor ingresa un nombre válido (entre 4 y 40 carácteres). </div>
+                </div>
+                <div class="row-md-6 mb-3">
+                    <label for="Correo">Correo electrónico</label>
+                    <input type="email" class="form-control" id="Correo" placeholder="Ingrese su correo electrónico"
+                        required>
+                    <div class="valid-feedback"> ¡Perfecto! </div>
+                    <div class="invalid-feedback"> Por favor ingresa un correo válido. </div>
+                </div>
+                <div class="row-md-3 mb-3">
+                    <label for="Contra">Contraseña</label>
+                    <input type="password" class="form-control" id="Contra" placeholder="Ingrese su contraseña"
+                        minlength="6" maxlength="16" required>
+                    <div class="valid-feedback"> ¡Perfecto! </div>
+                    <div class="invalid-feedback"> Por favor ingresa una contraseña válida (de 6 a 16 carácteres).
+                    </div>
+                </div>
+                <div class="row-md-3 mb-3">
+                    <label for="Direccion">Dirección</label>
+                    <input type="text" class="form-control" id="Direccion" placeholder="Ingrese su dirección"
+                        minlength="4" maxlength="50" required>
+                    <div class="valid-feedback"> ¡Perfecto! </div>
+                    <div class="invalid-feedback"> Por favor ingresa una dirección válida (de 4 a 50 carácteres). </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Terminos" required>
+                        <label class="form-check-label" for="Terminos">
+                            Aceptas los términos y condiciones.
+                        </label>
+                        <div class="valid-feedback"> ¡Perfecto! </div>
+                        <div class="invalid-feedback"> Debes aceptar los términos y condiciones. </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Registrarse</button>
         </form>
-
+    </div>
 </body>
 
 </html>
