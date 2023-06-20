@@ -1,16 +1,26 @@
-{% extends 'core/base.html' %}
+<!doctype html>
+<html lang="en">
 
-{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Salchicha</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
 
-{% block css %}
-
-{% endblock %}
-
-{% block javascript %}
-
-{% endblock %}
-
-{% block contenido %}
+<body class="body">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <!--Barra de navegacion-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="padding-left: 30px;">
+    <a class="navbar-brand" href="#">Salchicha</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -52,12 +62,12 @@
           culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       <div class="col imgAbout">
-        <img src="{% static 'core/'%}img/completoitaliano.jpg" style="height: 100%; width: 100%">
+        <img src="file/completoitaliano.jpg" style="height: 100%; width: 100%">
       </div>
     </div>
     <div class="row" style="padding-top: 50px;">
       <div class="col imgAbout">
-        <img src="{% static 'core/'%}img/completoitaliano.jpg" style="height: 100%; width: 100%">
+        <img src="file/completoitaliano.jpg" style="height: 100%; width: 100%">
       </div>
       <div class="col textoAbout">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -68,5 +78,6 @@
       </div>
     </div>
   </div>
+</body>
 
-{% endblock %}
+</html>

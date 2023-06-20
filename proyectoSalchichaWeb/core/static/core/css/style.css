@@ -1,0 +1,147 @@
+ /* El body al parecer no funciona, así que lo dejamos como una clase */
+.body {
+    background-color: #fff3c7;
+}
+
+/* barra de navegación (modificar a bootstrap) */
+
+.navbarFixiado {
+    position: fixed;
+}
+
+li:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.active {
+    background-color: #af9261;
+}
+
+.active:hover {
+    background-color: #fbd28b;
+}
+
+.nav-item {
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* Principal */
+
+.textoAbout {
+    background-color: #fff4e1;
+}
+
+.carrusel {
+    width: 100%;
+    height: 100%;
+}
+
+.imagenCarrusel {
+    width: 700px;
+    height: 700px;
+}
+
+.content {
+    margin-top: 55px;
+}
+
+.textoAbout {
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.imgAbout img {
+    box-shadow: 3px 0 10px 1px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* compra */
+
+.card-group img {
+    height: 250px;
+}
+
+.card {
+    margin: 20px 10px 0;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.card-body {
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.card-body a {
+    position: absolute;
+    bottom: 0;
+}
+
+ /* formulario registro / login */
+
+ .formReg {
+    margin-top: 50px;
+    background-color: #fff4e1;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+ }
+
+ .formLog {
+    padding: 20px;
+    
+ }
+
+  /* slide compra */
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (min-width: 1025px) {
+        .h-custom {
+        height: 100vh !important;
+        }
+        }
+        
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+        font-size: 1rem;
+        line-height: 2.15;
+        padding-left: .75em;
+        padding-right: .75em;
+        }
+        
+        .card-registration .select-arrow {
+        top: 13px;
+        }
+        
+        .bg-grey {
+        background-color: #eae8e8;
+        }
+        
+        @media (min-width: 992px) {
+        .card-registration-2 .bg-grey {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        }
+        }
+        
+        @media (max-width: 991px) {
+        .card-registration-2 .bg-grey {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        }
+        }
