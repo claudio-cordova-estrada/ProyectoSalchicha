@@ -1,6 +1,13 @@
 //Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
 
+
+function cambiarCurrency() {
+    var precio = document.getElementById('precio').textContent;
+    var precioFormateado = parseInt(precio).toLocaleString('es-CL', {style: 'currency', currency: 'CLP'});
+    document.getElementById('precio').textContent = precioFormateado;
+}
+
 //Espermos que todos los elementos de la pàgina cargen para ejecutar el script
 if(document.readyState == 'loading'){
     document.addEventListener('DOMContentLoaded', ready)
@@ -9,7 +16,7 @@ if(document.readyState == 'loading'){
 }
 
 function ready(){
-    
+    cambiarCurrency() 
     //Agregremos funcionalidad a los botones eliminar del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
     for(var i=0;i<botonesEliminarItem.length; i++){
@@ -194,6 +201,3 @@ function actualizarTotalCarrito(){
 
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 }
-
-var valor = 0;
-document.getElementsByClassName('precio-item').innerText = valor.toLocaleString("es");

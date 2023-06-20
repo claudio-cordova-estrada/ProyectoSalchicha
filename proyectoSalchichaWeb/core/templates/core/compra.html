@@ -21,7 +21,7 @@
             <div class="item">
                 <span class="titulo-item"> {{ producto.nombre }} </span>
                 <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" class="img-item">
-                <span class="precio-item">${{producto.precio}} </span>
+                <span class="precio-item" id="precio">{{producto.precio}} </span>
                 <button class="boton-item">Agregar</button>
             </div>
             {% endfor %}
