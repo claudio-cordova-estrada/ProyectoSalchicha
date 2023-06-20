@@ -3,121 +3,138 @@
 {% load static %}
 
 {% block css %}
-
+<link rel="stylesheet" href="{% static 'core/'%}css/carrito.css">
 {% endblock %}
 
 {% block javascript %}
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="{% static 'core/'%}js/carrito.js"></script>
 {% endblock %}
 
 {% block contenido %}
 
-  <!-- productos para compra -->
-  <div class="container">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" async></script>
+    <title>Tienda de Relojes | </title>
+</head>
+<body>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Box Engasse</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$15.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">English Horse</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$25.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Knock Nap</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$35.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">La Night</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Silver All</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Skin Glam</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Midimix</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$54.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Sir Blue</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Middlesteel</span>
+                <img src="{% static 'core/'%}img/completoitaliano.jpg" alt="" class="img-item">
+                <span class="precio-item">$42.800</span>
+                <button class="boton-item">Agregar</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
 
-    <div class="card-group col-row">
-      <div class="card">
-        <img class="card-img-top" src="{% static 'core/'%}img/completoitaliano.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Completo italiano</h5>
-          <p class="card-text">Un tradicional palta, tomate y mayonesa.</p>
-          <a class="btn btn-primary" id="agregarItem">Agregar</a> 
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
         </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card-img-top" src="{% static 'core/'%}img/italiano gigante.jpeg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">italiano</h5>
-          <p class="card-text">Un completo Italiano agrandado. Extra grande, extra sabroso.</p>
-          <p><a href="carrito.html" class="btn btn-primary">Agregar</a></p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card-img-top" src="{% static 'core/'%}img/completoBrasileño.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Brasileño</h5>
-          <p class="card-text">Un completo con queso derretido y palta. Como miel al paladar.</p>
-          <a href="carrito.html" class="btn btn-primary">Agregar</a>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-group col-row">
-      <div class="card">
-        <img class="card-img-top" src="{% static 'core/'%}img/completoPobre.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">A lo pobre</h5>
-          <p class="card-text">Huevo, cebolla frita y queso derretido. No se puede fallar con un clásico.</p>
-          <a href="carrito.html" class="btn btn-primary">Agregar</a>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card-img-top" src="{% static 'core/'%}img/italianoconpalta.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Chacarero</h5>
-          <p class="card-text">Porotos verdes, ají verde, tomate y mayonesa. Las bombas nucleares se quedan cortas con
-            esta nuclear.</p>
-          <p><a href="carrito.html" class="btn btn-primary">Agregar</a></p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card-img-top" src="{% static 'core/'%}img/segundoitaliano.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Papapleto</h5>
-          <p class="card-text">Completo con preparación tradicional con papas fritas encima.</p>
-          <a href="carrito.html" class="btn btn-primary">Agregar</a>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">prueba carrito</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-
-        <div class="container">
-          <div class="row">
-              <!-- Elementos generados a partir del JSON -->
-              <main id="items" class="col-sm-8 row"></main>
-              <!-- Carrito -->
-              <aside class="col-sm-4">
-                  <h2>Carrito</h2>
-                  <!-- Elementos del carrito -->
-                  <ul id="carrito" class="list-group"></ul>
-                  <hr>
-                  <!-- Precio total -->
-                  <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                  <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-              </aside>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
+    </section>
+</body>
+</html>
 
 {% endblock %}
