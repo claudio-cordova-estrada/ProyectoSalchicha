@@ -49,6 +49,7 @@ header h1{
 .contenedor .contenedor-items .item .img-item{
     width: 10rem;
     height: 9rem;
+    border-radius: 5px;
 }
 .contenedor .contenedor-items .item:hover{
     box-shadow: 0 0 10px #666;
