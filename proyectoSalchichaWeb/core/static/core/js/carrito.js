@@ -3,9 +3,12 @@ var carritoVisible = false;
 
 
 function cambiarCurrency() {
-    var precio = document.getElementById('precio').textContent;
-    var precioFormateado = parseInt(precio).toLocaleString('es-CL', {style: 'currency', currency: 'CLP'});
-    document.getElementById('precio').textContent = precioFormateado;
+    var productos = document.querySelectorAll("#div-productos #precio");
+    for (var i = 0; i < productos.length; i++) {
+		var producto = parseInt(productos[i].textContent);
+		var precioFormateado = producto.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'});
+		productos[i].textContent = precioFormateado;
+	}
 }
 
 //Espermos que todos los elementos de la pàgina cargen para ejecutar el script
@@ -199,5 +202,5 @@ function actualizarTotalCarrito(){
     }
     total = Math.round(total * 100)/100;
 
-    document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
+    document.getElementsByClassName('carrito-precio-total')[0].innerText = total.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'});
 }
