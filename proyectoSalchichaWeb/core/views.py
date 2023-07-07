@@ -18,7 +18,7 @@ def compra(request):
     return render(request, 'core/compra.html', data)
 
 def login(request):
-    return render(request, 'core/login.html')
+    return render(request, 'registration/login.html')
 
 def registrarse(request):
-    return render(request, 'core/registrarse.html')
+    return render(request, 'registration/registrarse.html')
